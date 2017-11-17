@@ -107,7 +107,7 @@
                 margin-top: 12px;
                 margin-left: 5%;
                 float: left;
-                transition: color 0.5s linear;
+                transition: color 0.5s ease;
 
                 @media (max-width: 1160px) {
                    padding-left: 2%;
@@ -132,7 +132,7 @@
                 .link-item {
                    margin: 0 20px;
                    display: inline-block;
-                   transition: color 0.5s linear;
+                   transition: color 0.5s ease;
                    font-size: 18px; 
 
                    @media (max-width: 780px) {
@@ -145,7 +145,7 @@
                 .link-item a:link,
                 .link-item a:visited {
                    color: #fff;
-                   transition: color 0.5s linear;
+                   transition: color 0.5s ease; 
                 }
 					 
                 .link-item a:hover {
@@ -215,11 +215,14 @@
 
        .projects-arrow {
           position: absolute;
-          bottom: 5%;
-          left: 49%;
-
+          bottom: 3%; 
+          left: 49%;        
+			
+			 @media (max-width: 680px) {
+                left: 45%;  
+             }
           .fa-angle-down {
-             animation: pulse 1.3s infinite alternate;
+             animation: pulse 1s infinite alternate; 
           }
 
           @keyframes pulse {

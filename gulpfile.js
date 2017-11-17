@@ -10,7 +10,7 @@ var gulp = require('gulp'),
       'scripts': './src/scripts/',
       'js': './build/js/',
       'images': './src/images/',
-      'img': './build/img/',
+      'img': './build/img/'
    };
 
 
@@ -69,7 +69,7 @@ gulp.task('reload', function () {
 gulp.task('watch', function () {
    gulp.watch(paths.sass + '**/*.scss', ['sass']); // Watch sass files
    gulp.watch(paths.scripts + '**/*.js', ['scripts']); // Watch .js files
-   gulp.watch(paths.site + '**/*.html', ['reload']); // Watch html files
+   gulp.watch('*.html', ['reload']); // Watch html files
    gulp.watch(paths.images, ['imageMin']); // Watch image files
 });
 
