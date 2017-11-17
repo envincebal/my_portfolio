@@ -1,0 +1,369 @@
+ /*** GENERAL CSS RULES ***/
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+ }
+
+ html,
+ body {
+    font-family: "Lato", sans-serif;
+    text-rendering: optimizeLegibility;
+ }
+
+ a:link {
+    text-decoration: none;
+ }
+
+ li {
+    list-style-type: none;
+    font-size: 18px;
+ }
+
+ p {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 25px;
+ }
+
+ hr {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 2px solid rgba(0, 0, 0, .5);
+ }
+
+ /*** ***/
+
+ /* REUSABLE COMPONENTS */
+
+ $mainBlue: #5682C5;
+ $mainRed: #f44b4b;
+
+ section {
+    padding: 60px 10px;
+ }
+
+ section:nth-child(even) {
+    background-color: #F6F6F6;
+ }
+
+ .section-container {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px;
+ }
+
+ .section-title {
+    margin: 0 auto 20px auto;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    padding: 10px;
+ }
+
+ .section-title:after {
+    display: block;
+    height: 3px;
+    width: 100px;
+    background-color: $mainRed;
+    content: " ";
+    margin: 10px auto 0 auto;
+ }
+
+ .section-img {
+    border: 2px solid #fff;
+    border-radius: 100%;
+    width: 175px;
+ }
+
+ /******/
+
+ body {
+
+    /*** HEADER RULES ***/
+    .header-section { 
+       height: 100vh;
+       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/macbook.jpg"); 
+       background-position: center;     
+       background-repeat: no-repeat; 
+       background-size: cover;
+       background-attachment: fixed;
+       color: #fff;
+
+       .navbar {  
+          min-height: 55px;
+          width: 100%;
+          transition: all 1s ease-in-out;
+
+          .nav-wrapper {
+             max-width: 1104px;
+             margin: 0 auto;
+
+             .nav-icon {
+                color: #fff;
+                margin-top: 12px;
+                margin-left: 5%;
+                float: left;
+                transition: color 0.5s linear;
+
+                @media (max-width: 1160px) {
+                   padding-left: 2%;
+                }
+             }
+
+             .nav-icon:hover {
+                color: $mainBlue;
+             }
+
+             .nav-links {
+                float: right;
+                margin-top: 15px; 
+                font-weight: 300;
+
+                @media (max-width: 780px) {
+                   display: none;
+                   width: 100%;
+                   text-align: center;
+                }
+
+                .link-item {
+                   margin: 0 20px;
+                   display: inline-block;
+                   transition: color 0.5s linear;
+                   font-size: 18px; 
+
+                   @media (max-width: 780px) {
+                      margin: 5px 0 5px 0;
+                      display: block;
+                   }
+                }
+
+
+                .link-item a:link,
+                .link-item a:visited {
+                   color: #fff;
+                   transition: color 0.5s linear;
+                }
+                .link-item a:hover {
+                   color: $mainBlue;
+                }
+             }
+
+             .menu-icon {
+                display: none;
+                float: right;
+                margin-top: 12px;
+                margin-right: 5%;
+                cursor: pointer;
+
+                @media (max-width: 780px) {
+                   display: inline-block;
+                }
+             }
+             .close-icon {
+                float: right;
+                margin-top: 12px;
+                margin-right: 5%;
+                cursor: pointer;
+
+             }
+          }
+       }
+
+       .nav-sticky {
+          position: fixed;
+          background-color: rgba(0, 0, 0, 0.7);
+          box-shadow: 0px -2px 5px 4px rgba(0, 0, 0, 0.7);
+       }
+
+       .title-container {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-shadow: 3px 3px 0px rgba(0, 0, 0, 1);
+          text-align: center;
+          text-transform: uppercase;
+          width: 100%;
+
+          .blue {
+             color: $mainBlue;
+          }
+
+          .title-name {
+             font-size: 4.25rem;
+
+             @media (max-width: 500px) {
+                font-size: 2.5rem;
+             }
+          }
+
+          .title-job {
+             font-size: 2rem;
+             font-weight: 300;
+
+             @media (max-width: 500px) {
+                font-size: 1.25rem;
+             }
+          }
+       }
+
+       .projects-arrow {
+          position: absolute;
+          bottom: 5%;
+          left: 49%;
+
+          .fa-angle-down {
+             animation: pulse 1.3s infinite alternate;
+          }
+
+          @keyframes pulse {
+             0% {
+                color: #fff;
+             }
+
+             100% {
+                color: $mainRed;
+             }
+          }
+       }
+    }
+
+    .header-border {
+       border-top: 3px solid $mainBlue;
+    }
+
+    /******/
+    /*** SKILLS RULES ***/
+    .skills-section {
+
+       .icon-row {
+          display: inline-block;
+
+          @media (max-width: 500px) {
+             display: inline;
+          }
+
+          .tool-icon {
+             width: 100px;
+             margin: 0 5px;
+          }
+       }
+    }
+
+    /******/
+    /*** PROJECT SECTION RULES ***/
+    .project-section {
+
+       .project-div {
+          padding: 30px 0;
+
+          .project-img {
+             max-width: 500px;
+             width: 100%;
+             box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 1);
+             transition: all 0.5s ease;
+          }
+
+          .project-img:hover {
+             box-shadow: 0px 0px 30px 1px rgba(0, 0, 0, 1);
+          }
+
+          .project-title {
+             margin: 20px 0;
+             text-transform: uppercase;
+
+          }
+
+          .fa {
+             margin: 0 30px;
+             color: #000;
+             transition: color 0.5s ease;
+          }
+
+          .fa:hover {
+             color: $mainBlue;
+          }
+
+          .tech-list li {
+             border: 2px solid $mainBlue;
+             background-color: $mainBlue;
+             color: #fff;
+             padding: 5px;
+             margin: 5px;
+             display: inline-block;
+          }
+       }
+    }
+    /******/
+    /*** CONTACT SECTION RULES ***/
+    .contact-section {
+
+       .form {
+          width: 100%;
+
+          .form-control {
+             width: 100%;
+             margin-bottom: 20px;
+             padding: 5px;
+             font-size: 20px;
+             border-radius: 5px;
+             border: 1px solid #000;
+          }
+
+          .input-name,
+          .input-email {
+             height: 40px;
+          }
+
+          .form-submit {
+             background-color: #fff;
+             border: 2px solid $mainRed;
+             border-radius: 5px;
+             font-size: 18px;
+             padding: 10px 20px;
+             transition: all 0.5s ease;
+          }
+
+          .form-submit:hover {
+             color: #fff;
+             background-color: $mainRed;
+          }
+       }
+
+       .twitter-icon,
+       .github-icon,
+       .linkedin-icon {
+          margin: 0 20px;
+          color: #000;
+          transition: color .5s ease;
+       }
+
+       .twitter-icon:hover {
+          color: #4899F0;
+       }
+       .github-icon:hover {
+          color: #9C00AE;
+       }
+
+       .linkedin-icon:hover {
+          color: #3171B3;
+       }
+    }
+
+    .footer-border {
+       border-bottom: 3px solid $mainRed;
+    }
+
+    /******/
+    /*** FOOTER RULES ***/
+    footer {
+       background-color: $mainBlue;
+       padding: 20px;
+       text-align: center;
+       color: #fff;
+    }
+ }
