@@ -136,17 +136,18 @@
                    font-size: 18px; 
 
                    @media (max-width: 780px) {
-                      margin: 5px 0 5px 0;
+                      margin: 15px 0 15px 0;
                       display: block;
+							 text-transform: uppercase;
                    }
                 }
-
 
                 .link-item a:link,
                 .link-item a:visited {
                    color: #fff;
                    transition: color 0.5s linear;
                 }
+					 
                 .link-item a:hover {
                    color: $mainBlue;
                 }
@@ -163,6 +164,7 @@
                    display: inline-block;
                 }
              }
+				 
              .close-icon {
                 float: right;
                 margin-top: 12px;

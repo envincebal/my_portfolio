@@ -11,16 +11,9 @@ var gulp = require('gulp'),
       'js': './build/js/',
       'images': './src/images/',
       'img': './build/img/',
-  
    };
 
-<<<<<<< HEAD
-gulp.task('deploy', function () {
-  return gulp.src("./build/**/*")
-    .pipe(deploy())
-});
-=======
->>>>>>> master
+
 // Sass task: Compile SCSS files to CSS
 gulp.task('sass', function () {
    var prefixSetting = autoprefixer({
