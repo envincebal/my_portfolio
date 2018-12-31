@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+	const date = new Date();
+	const year = date.getFullYear();
+
 	/* For the sticky nav */
 	$(".header-border").waypoint(function (direction) {
 		if (direction === "down") {
@@ -62,4 +65,6 @@ $(document).ready(function () {
 			menu.removeAttr('style');
 		}
 	});
+
+	$(".copyright").html("Copyright © " + year + " by Vincent Yan. All rights reserved.")
 });
