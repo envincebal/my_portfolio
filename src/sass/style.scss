@@ -40,12 +40,13 @@
 
  $mainBlue: #5682C5;
  $mainRed: #f44b4b;
+
  section {
  	padding: 60px 10px;
  }
 
  section:nth-child(even) {
- 	background-color: #F6F6F6;
+ 	background-color: #e9e5e5;
  }
 
  .section-container {
@@ -58,8 +59,8 @@
  	margin: 0 auto 20px auto;
  	font-weight: 700;
  	font-size: 30px;
-	 padding: 10px;
-	 text-transform: uppercase;
+ 	padding: 10px;
+ 	text-transform: uppercase;
  }
 
  .section-title:after {
@@ -80,6 +81,7 @@
  /******/
 
  body {
+
  	/*** HEADER RULES ***/
  	.header-section {
  		height: 100vh;
@@ -89,65 +91,79 @@
  		background-size: cover;
  		background-attachment: fixed;
  		color: #fff;
+
  		.navbar {
  			min-height: 55px;
  			width: 100%;
  			transition: all 1s ease-in-out;
+
  			.nav-wrapper {
  				max-width: 1104px;
  				margin: 0 auto;
+
  				.nav-icon {
  					color: #fff;
  					margin-top: 12px;
  					margin-left: 5%;
  					float: left;
  					transition: color 0.5s ease;
+
  					@media (max-width: 1160px) {
  						padding-left: 2%;
  					}
  				}
+
  				.nav-icon:hover {
  					color: $mainBlue;
  				}
+
  				.nav-links {
  					float: right;
  					margin-top: 15px;
  					font-weight: 300;
+
  					@media (max-width: 780px) {
  						display: none;
  						width: 100%;
  						text-align: center;
  					}
+
  					.link-item {
  						margin: 0 20px;
  						display: inline-block;
  						transition: color 0.5s ease;
  						font-size: 18px;
+
  						@media (max-width: 780px) {
  							margin: 15px 0 15px 0;
  							display: block;
  							text-transform: uppercase;
  						}
  					}
+
  					.link-item a:link,
  					.link-item a:visited {
  						color: #fff;
  						transition: color 0.5s ease;
  					}
+
  					.link-item a:hover {
  						color: $mainBlue;
  					}
  				}
+
  				.menu-icon {
  					display: none;
  					float: right;
  					margin-top: 12px;
  					margin-right: 5%;
  					cursor: pointer;
+
  					@media (max-width: 780px) {
  						display: inline-block;
  					}
  				}
+
  				.close-icon {
  					float: right;
  					margin-top: 12px;
@@ -156,11 +172,13 @@
  				}
  			}
  		}
+
  		.nav-sticky {
  			position: fixed;
  			background-color: rgba(0, 0, 0, 0.7);
  			box-shadow: 0px -2px 5px 4px rgba(0, 0, 0, 0.702);
  		}
+
  		.title-container {
  			position: absolute;
  			top: 50%;
@@ -169,62 +187,77 @@
  			text-shadow: 3px 2px 0px #000;
  			text-align: center;
  			width: 100%;
+
  			.blue {
  				color: $mainBlue;
  			}
+
  			.title-name {
-				 font-size: 4.25rem;
-				 text-transform: uppercase; 
+ 				font-size: 4.25rem;
+ 				text-transform: uppercase;
+
  				@media (max-width: 500px) {
  					font-size: 2.5rem;
  				}
  			}
+
  			.title-job {
  				font-size: 2rem;
  				font-weight: 300;
+
  				@media (max-width: 500px) {
  					font-size: 1.25rem;
  				}
  			}
  		}
+
  		.projects-arrow {
  			position: absolute;
  			bottom: 3%;
  			left: 49%;
+
  			@media (max-width: 680px) {
  				left: 45%;
  			}
+
  			.fa-angle-down {
  				animation: pulse 1s infinite alternate;
  			}
+
  			@keyframes pulse {
  				0% {
  					color: #fff;
  				}
+
  				100% {
  					color: $mainRed;
  				}
  			}
  		}
  	}
+
  	.header-border {
- 		border-top: 3px solid $mainBlue;
+ 		border-top: 2px solid $mainBlue;
  	}
+
  	/******/
  	/*** SKILLS RULES ***/
  	.skills-section {
  		.icon-row {
  			display: inline-block;
+
  			@media (max-width: 500px) {
  				display: inline;
  			}
+
  			.tool-icon {
  				width: 100px;
  				margin: 0 5px;
  			}
  		}
  	}
-	 /******/
+
+ 	/******/
 
  	/*** PROJECT SECTION RULES ***/
  	.project-section {
@@ -232,45 +265,57 @@
  			text-align: center;
  			margin: 0 auto;
  			max-width: 1000px;
+
  			.project-div {
  				padding: 30px 0;
  				display: flex;
  				align-items: center;
+
  				@media (max-width: 900px) {
  					display: block;
  				}
+
  				.img-div {
  					width: 40%;
+
  					.project-img {
  						width: 100%;
  						box-shadow: 0px 0px 14px -1px #000;
  						transition: all 0.5s ease;
  					}
+
  					.project-img:hover {
  						box-shadow: 0px 0px 30px 1px #000;
  					}
+
  					@media (max-width: 900px) {
  						width: 100%;
  					}
  				}
+
  				.project-details {
  					width: 60%;
  					padding: 0 0 0 30px;
+
  					.project-title {
-						 margin: 0 0 20px 0;
+ 						margin: 0 0 20px 0;
+
  						@media (max-width: 900px) {
  							width: 100%;
  							margin: 20px 0;
  						}
  					}
+
  					.fa {
  						margin: 0 30px;
  						color: #000;
  						transition: color 0.5s ease;
  					}
+
  					.fa:hover {
  						color: $mainBlue;
  					}
+
  					.tech-list li {
  						border: 2px solid $mainBlue;
  						background-color: $mainBlue;
@@ -279,6 +324,7 @@
  						margin: 5px;
  						display: inline-block;
  					}
+
  					@media (max-width: 900px) {
  						width: 100%;
  						padding: 0;
@@ -287,11 +333,13 @@
  			}
  		}
  	}
+
  	/******/
  	/*** CONTACT SECTION RULES ***/
  	.contact-section {
  		.form {
  			width: 100%;
+
  			.form-control {
  				width: 100%;
  				margin-bottom: 20px;
@@ -300,10 +348,12 @@
  				border-radius: 5px;
  				border: 1px solid #000;
  			}
+
  			.input-name,
  			.input-email {
  				height: 40px;
  			}
+
  			.form-submit {
  				background-color: $mainRed;
  				border-style: none;
@@ -313,11 +363,13 @@
  				padding: 15px 25px;
  				transition: all 0.5s ease;
  			}
+
  			.form-submit:hover {
  				cursor: pointer;
  				background-color: #b40808;
  			}
  		}
+
  		.fcc-icon,
  		.github-icon,
  		.linkedin-icon {
@@ -325,19 +377,24 @@
  			color: #000;
  			transition: color .5s ease;
  		}
+
  		.fcc-icon:hover {
  			color: #006607;
  		}
+
  		.github-icon:hover {
  			color: #9C00AE;
  		}
+
  		.linkedin-icon:hover {
  			color: #3171B3;
  		}
  	}
+
  	.footer-border {
- 		border-bottom: 3px solid $mainRed;
+ 		border-bottom: 2px solid $mainRed;
  	}
+
  	/******/
  	/*** FOOTER RULES ***/
  	footer {
