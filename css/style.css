@@ -326,12 +326,13 @@ a:hover {
   cursor: pointer;
   background-color: #b40808;
 }
-.fcc-icon, .github-icon, .linkedin-icon {
+.medium-icon, .github-icon, .linkedin-icon {
+  width: 50px;
   margin: 0 20px;
   color: #000;
   transition: color 0.5s ease;
 }
-.fcc-icon:hover {
+.medium-icon:hover {
   color: #006607;
 }
 .github-icon:hover {
