@@ -384,7 +384,8 @@ a:hover {
 }
 
 .input-name,
-.input-email {
+.input-email,
+.input-phone {
   height: 40px;
 }
 
