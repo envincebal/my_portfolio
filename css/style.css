@@ -56,6 +56,10 @@ section:nth-child(even) {
   text-transform: uppercase;
 }
 
+.section-container p {
+  text-align: left;
+}
+
 .section-title:after {
   display: block;
   height: 3px;
