@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: none;
 }
 
 body {
@@ -243,7 +242,7 @@ a:hover {
   }
 
   100% {
-    color: #f44b4b;
+    color: #e74a4a;
   }
 }
 
@@ -252,7 +251,7 @@ a:hover {
 }
 
 .resume-button {
-  background-color: #f44b4b;
+  background-color: #e74a4a;
   border: none;
   font-size: 16px;
   color: #fff;
@@ -355,10 +354,9 @@ a:hover {
 }
 
 .tech-list li {
-  border: 2px solid #5682c5;
-  background-color: #5682c5;
+  background-color: #1d4a8d;
   color: #fff;
-  padding: 5px;
+  padding: 10px;
   margin: 5px;
   display: inline-block;
 }
@@ -374,6 +372,14 @@ a:hover {
 
 /*** CONTACT SECTION RULES ***/
 
+.contact-section p {
+  text-align: center;
+}
+
+.form label {
+  float: left;
+}
+
 .form {
   width: 100%;
 }
@@ -383,8 +389,6 @@ a:hover {
   margin-bottom: 20px;
   padding: 5px;
   font-size: 20px;
-  border-radius: 5px;
-  border: 1px solid #000;
 }
 
 .input-name,
@@ -394,7 +398,7 @@ a:hover {
 }
 
 .form-submit {
-  background-color: #f44b4b;
+  background-color: #e74a4a;
   border-style: none;
   color: #fff;
   font-size: 16px;
